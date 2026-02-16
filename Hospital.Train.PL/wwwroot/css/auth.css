@@ -1,0 +1,78 @@
+﻿
+:root {
+    --primary-medical: #00a8cc; /* سماوي مشرق */
+    --secondary-medical: #e1f5fe; /* سماوي فاتح جدا للخلفيات */
+    --dark-medical: #007ea7;
+}
+
+
+body.auth-body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-color: var(--secondary-medical);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: none;
+    max-width: 550px;
+    margin: 40px auto;
+}
+
+.auth-header h3 {
+    color: var(--dark-medical);
+    font-weight: 700;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+}
+
+    .form-control:focus {
+        border-color: var(--primary-medical);
+        box-shadow: 0 0 0 0.25rem rgba(0, 168, 204, 0.25);
+    }
+
+.btn-primary {
+    background-color: var(--primary-medical);
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: var(--dark-medical);
+        transform: translateY(-2px);
+    }
+
+.btn-outline-primary {
+    color: var(--primary-medical);
+    border-color: var(--primary-medical);
+    border-radius: 10px;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+    color: var(--primary-medical);
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
