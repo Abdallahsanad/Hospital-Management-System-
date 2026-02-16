@@ -1,11 +1,12 @@
 ﻿using Hospital.Train.DAL.Models;
 using Hospital.Train.PL.Helper;
 using Hospital.Train.PL.ViewModels.AccountController;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.WebUtilities; 
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Hospital.Train.PL.Controllers
 {
@@ -218,6 +219,13 @@ namespace Hospital.Train.PL.Controllers
                 ModelState.AddModelError(string.Empty,ex.Message);
             }
             return View(model);
+        }
+
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }
